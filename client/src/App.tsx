@@ -6,6 +6,7 @@ function App() {
 		<>
 			<p className="text-red-500 text-8xl"> Hello world! </p>
 			<p>Welcome , lovely to have you here!</p>
+			<p>Hiii hello there</p>
 		</>
 	)
 }
