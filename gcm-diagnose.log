@@ -1,0 +1,185 @@
+﻿Diagnose log at 2023-07-06T10:49:05Z
+
+AppPath: C:\Users\iyimi\AppData\Local\Programs\Git\mingw64\bin\git-credential-manager.exe
+InstallDir: C:\Users\iyimi\AppData\Local\Programs\Git\mingw64\bin\
+Version: 2.1.2
+
+------------
+Diagnostic: Environment
+Skipped: False
+Success: True
+Exception: None
+Log:
+OSType: Windows
+OSVersion: 10.0 (build 19042)
+Reading environment variables... OK
+ Variables:
+HOMEPATH=\Users\iyimi
+DriverData=C:\Windows\System32\Drivers\DriverData
+COMPUTERNAME=DESKTOP-C7MPKS5
+GIT_TRACE2_PARENT_SID=70eb6271-27b9-4d46-ac0e-3476a9cf4f65
+CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+OneDrive=C:\Users\iyimi\OneDrive
+RegionCode=EMEA
+TMP=C:\Users\iyimi\AppData\Local\Temp
+HOME=C:\Users\iyimi
+PROCESSOR_REVISION=7e05
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW
+GIT_EXEC_PATH=C:/Users/iyimi/AppData/Local/Programs/Git/mingw64/libexec/git-core
+TEMP=C:\Users\iyimi\AppData\Local\Temp
+LOCALAPPDATA=C:\Users\iyimi\AppData\Local
+MSYSTEM=MINGW64
+TERM=xterm-256color
+COLORTERM=truecolor
+USERDOMAIN=DESKTOP-C7MPKS5
+ProgramFiles(x86)=C:\Program Files (x86)
+platformcode=KV
+Path=C:/Users/iyimi/AppData/Local/Programs/Git/mingw64/libexec/git-core;C:\Users\iyimi\AppData\Local\Programs\Git\mingw64\bin;C:\Users\iyimi\AppData\Local\Programs\Git\usr\bin;C:\Users\iyimi\bin;C:\Python311\Scripts\;C:\Python311\;C:\ProgramData\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\GitHub CLI\;C:\Users\iyimi\AppData\Local\Microsoft\WindowsApps;C:\Users\iyimi\AppData\Roaming\npm;C:\Users\iyimi\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\iyimi\AppData\Local\Programs\Git\cmd
+PROCESSOR_LEVEL=6
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 126 Stepping 5, GenuineIntel
+TMPDIR=C:\Users\iyimi\AppData\Local\Temp
+PROMPT=$P$G
+PSModulePath=C:\Program Files\WindowsPowerShell\Modules;C:\windows\system32\WindowsPowerShell\v1.0\Modules
+PUBLIC=C:\Users\Public
+NUMBER_OF_PROCESSORS=8
+CommonProgramFiles=C:\Program Files (x86)\Common Files
+PLINK_PROTOCOL=ssh
+ProgramData=C:\ProgramData
+ProgramFiles=C:\Program Files (x86)
+ChocolateyInstall=C:\ProgramData\chocolatey
+OnlineServices=Online Services
+ProgramW6432=C:\Program Files
+SESSIONNAME=Console
+LC_CTYPE=C.UTF-8
+CommonProgramW6432=C:\Program Files\Common Files
+ZES_ENABLE_SYSMAN=1
+LOGONSERVER=\\DESKTOP-C7MPKS5
+USERPROFILE=C:\Users\iyimi
+SystemRoot=C:\windows
+USERDOMAIN_ROAMINGPROFILE=DESKTOP-C7MPKS5
+APPDATA=C:\Users\iyimi\AppData\Roaming
+HOMEDRIVE=C:
+USERNAME=iyimi
+PROCESSOR_ARCHITEW6432=AMD64
+PROCESSOR_ARCHITECTURE=x86
+OS=Windows_NT
+ComSpec=C:\windows\system32\cmd.exe
+SystemDrive=C:
+windir=C:\windows
+OneDriveConsumer=C:\Users\iyimi\OneDrive
+ALLUSERSPROFILE=C:\ProgramData
+
+
+------------
+Diagnostic: File system
+Skipped: False
+Success: True
+Exception: None
+Log:
+Temporary directory is 'C:\Users\iyimi\AppData\Local\Temp\'...
+Checking basic file I/O...
+Writing to temporary file 'C:\Users\iyimi\AppData\Local\Temp\d0fb45a5970014514ff28927'... OK
+Reading from temporary file 'C:\Users\iyimi\AppData\Local\Temp\d0fb45a5970014514ff28927'... OK
+Deleting temporary file 'C:\Users\iyimi\AppData\Local\Temp\d0fb45a5970014514ff28927'... OK
+Testing IFileSystem instance...
+UserHomePath: C:\Users\iyimi
+UserDataDirectoryPath: C:\Users\iyimi\.gcm
+GetCurrentDirectory(): C:\Users\iyimi\OneDrive\Desktop\forked-projects\kimblu-chat
+
+------------
+Diagnostic: Networking
+Skipped: False
+Success: True
+Exception: None
+Log:
+Checking networking and HTTP stack...
+Creating HTTP client... OK
+IsNetworkAvailable: True
+Sending HEAD request to http://example.com... OK
+Sending HEAD request to https://example.com... OK
+Acquiring free TCP port... OK
+Testing local HTTP loopback connections...
+Creating new HTTP listener for http://localhost:49765/... OK
+Waiting for loopback connection... OK
+Writing response... OK
+Waiting for response data... OK
+Loopback connection data OK
+
+------------
+Diagnostic: Git
+Skipped: False
+Success: True
+Exception: None
+Log:
+Getting Git version... OK
+Git version is '2.41.0.windows.1'
+Locating current repository... OK
+Git repository at 'C:/Users/iyimi/OneDrive/Desktop/forked-projects/kimblu-chat/.git'
+Listing all Git configuration... OK
+Git configuration:
+file:C:/Users/iyimi/AppData/Local/Programs/Git/etc/gitconfig	diff.astextplain.textconv=astextplain
+file:C:/Users/iyimi/AppData/Local/Programs/Git/etc/gitconfig	filter.lfs.clean=git-lfs clean -- %f
+file:C:/Users/iyimi/AppData/Local/Programs/Git/etc/gitconfig	filter.lfs.smudge=git-lfs smudge -- %f
+file:C:/Users/iyimi/AppData/Local/Programs/Git/etc/gitconfig	filter.lfs.process=git-lfs filter-process
+file:C:/Users/iyimi/AppData/Local/Programs/Git/etc/gitconfig	filter.lfs.required=true
+file:C:/Users/iyimi/AppData/Local/Programs/Git/etc/gitconfig	http.sslbackend=openssl
+file:C:/Users/iyimi/AppData/Local/Programs/Git/etc/gitconfig	http.sslcainfo=C:/Users/iyimi/AppData/Local/Programs/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+file:C:/Users/iyimi/AppData/Local/Programs/Git/etc/gitconfig	core.autocrlf=true
+file:C:/Users/iyimi/AppData/Local/Programs/Git/etc/gitconfig	core.fscache=true
+file:C:/Users/iyimi/AppData/Local/Programs/Git/etc/gitconfig	core.symlinks=true
+file:C:/Users/iyimi/AppData/Local/Programs/Git/etc/gitconfig	core.fsmonitor=true
+file:C:/Users/iyimi/AppData/Local/Programs/Git/etc/gitconfig	pull.rebase=false
+file:C:/Users/iyimi/AppData/Local/Programs/Git/etc/gitconfig	init.defaultbranch=main
+file:C:/Users/iyimi/.gitconfig	user.name=Iyimide Adekile
+file:C:/Users/iyimi/.gitconfig	user.email=adekileiyimide@gmail.com
+file:C:/Users/iyimi/.gitconfig	credential.helper=cache
+file:C:/Users/iyimi/.gitconfig	credential.helper=
+file:C:/Users/iyimi/.gitconfig	credential.helper=C:/Users/iyimi/AppData/Local/Programs/Git/mingw64/bin/git-credential-manager.exe
+file:C:/Users/iyimi/.gitconfig	credential.https://dev.azure.com.usehttppath=true
+file:.git/config	core.repositoryformatversion=0
+file:.git/config	core.filemode=false
+file:.git/config	core.bare=false
+file:.git/config	core.logallrefupdates=true
+file:.git/config	core.symlinks=false
+file:.git/config	core.ignorecase=true
+file:.git/config	remote.origin.url=https://github.com/iyifr/kimblu-chat.git
+file:.git/config	remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+file:.git/config	branch.main.remote=origin
+file:.git/config	branch.main.merge=refs/heads/main
+
+
+------------
+Diagnostic: Credential storage
+Skipped: False
+Success: True
+Exception: None
+Log:
+ICredentialStore instance is of type: CredentialStore
+Writing test credential... OK
+Reading test credential... OK
+Deleting test credential... OK
+
+------------
+Diagnostic: Microsoft authentication (AAD/MSA)
+Skipped: False
+Success: True
+Exception: None
+Log:
+Broker is not enabled.
+Flow type is: Auto
+Gathering MSAL token cache data... OK
+CacheDirectory: C:\Users\iyimi\AppData\Local\.IdentityService
+CacheFileName: msal.cache
+CacheFilePath: C:\Users\iyimi\AppData\Local\.IdentityService\msal.cache
+Creating cache helper... OK
+Verifying MSAL token cache persistence... OK
+
+------------
+Diagnostic: GitHub API
+Skipped: False
+Success: True
+Exception: None
+Log:
+Using 'https://github.com/' as API target.
+Querying '/meta' endpoint... OK
+
