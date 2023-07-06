@@ -5,7 +5,7 @@ function App() {
 	return (
 		<>
 			<p className="text-red-500 text-8xl"> Hello world! </p>
-			<p>Welcome to Kimblu</p>
+			<p>Welcome , lovely to have you here!</p>
 		</>
 	)
 }
