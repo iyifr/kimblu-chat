@@ -4,8 +4,8 @@ function App() {
 
 	return (
 		<>
-			<p className="text-red-500 text-5xl"> Hello world! </p>
-			<p>Hello world</p>
+			<p className="text-red-500 text-8xl"> Hello world! </p>
+			<p>Welcome to Kimblu</p>
 		</>
 	)
 }
