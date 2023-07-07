@@ -1,13 +1,14 @@
 import * as express from 'express'
 import cors from 'cors'
 import { prisma } from './prisma.connect.mjs'
+import "dotenv/config"
 
 
 async function main() {
     // ... you will write your Prisma Client queries here
     await prisma.user.create({
         data: {
-            name: 'Rich',
+            name: 'Joshua',
             email: 'hello@prisma.com',
             posts: {
                 create: {
