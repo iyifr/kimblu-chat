@@ -1,10 +1,11 @@
-import "./App.css"
+import { io } from "socket.io-client"
+
+const socket = io("http://localhost:3000")
 
 function App() {
-
 	return (
 		<>
-			<p className="text-red-500 text-8xl"> Hello world! </p>
+			<p className='text-red-500 text-8xl'> Hello world! </p>
 			<p>Welcome , lovely to have you here!</p>
 			<p>Hiii hello there</p>
 		</>
