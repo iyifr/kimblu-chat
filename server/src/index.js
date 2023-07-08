@@ -1,17 +1,19 @@
 import express from 'express'
 import cors from 'cors'
 import http from 'node:http'
-import { prisma } from './prisma.connect.mjs'
+import { prisma } from '../prisma.connect.mjs'
 import { Server } from 'socket.io'
+import { router } from './routes/index.js'
 import "dotenv/config"
 
 
-
+//middleware
 const app = express()
 app.use(cors())
 app.use(express.json())
+app.use('/api', router)
 
-
+//socket setup
 const httpServer = http.createServer(app)
 const io = new Server(httpServer, {
     cors: {
@@ -23,22 +25,24 @@ const io = new Server(httpServer, {
 const port = process.env.PORT || 5000
 httpServer.listen(port, () => console.log(`Server running on port ${port}`))
 
-app.get('/', (req, res) => {
-    res.send("Hellooooo")
-})
-
 // Run when client connects
 io.on('connection', socket => {
     console.log(`Socket ${socket.id} connected`)
 
-    socket.on('sendMessage', (message) => {
-        io.emit('message', message);
+    socket.on('send-message', (message) => {
+        socket.broadcast.emit("message-from-server", message)
+        console.log('Message received', message)
     });
+
+    socket.on(('typing'), () => {
+        console.log("pde")
+    })
 
     socket.on('disconnect', () => {
         console.log(`Socket ${socket.id} disconnected`);
     });
 })
+
 
 
 

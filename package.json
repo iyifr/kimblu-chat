@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "start-watch": "cd server && nodemon index.js",
+    "start-watch": "cd server/src && nodemon index.js",
     "dev": "concurrently \"npm run start-watch\" \"cd client && npm run dev\""
   },
   "keywords": [],
