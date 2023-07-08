@@ -12,6 +12,7 @@ const DirectMessage = () => {
 	const [socket, setSocket] = useState<null | Socket>(null)
 	const [message, setMessage] = useState("")
 	const [allMessages, setAllMessages] = useState<Array<Message>>([])
+	const [typing, setTyping] = useState(false)
 
 	useEffect(() => {
 		const newSocket = io("http://localhost:5000")
@@ -26,13 +27,20 @@ const DirectMessage = () => {
 		if (!socket) return
 
 		socket.on("message-from-server", (data) => {
-			setAllMessages(() => [
-				...allMessages,
+			setTyping(false)
+			setAllMessages((messages) => [
+				...messages,
 				{ message: data.message, recieved: true },
 			])
-			console.log(allMessages)
 		})
-	}, [socket, allMessages])
+		socket.on("typing-started", () => {
+			setTyping(true)
+		})
+
+		socket.on("typing-stopped", () => {
+			setTyping(false)
+		})
+	}, [socket, setAllMessages])
 
 	const handleSubmit = (e: { preventDefault: () => void }) => {
 		e.preventDefault()
@@ -51,6 +59,12 @@ const DirectMessage = () => {
 				) : (
 					<ChatBubble2 data={msg} key={index} />
 				)
+			)}
+
+			{typing === true ? (
+				<span className='loading loading-dots loading-lg text-accent'></span>
+			) : (
+				""
 			)}
 
 			<MessageInput message={message} setMessage={setMessage} socket={socket} />

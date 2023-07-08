@@ -8,17 +8,20 @@ type InputProps = {
 }
 const MessageInput = ({ message, setMessage, socket }: InputProps) => {
 	const [error, setError] = useState(true)
+	const [typingTimer, setTypingTimer] = useState<null | number>(null)
 
+	// handlechange emit
 	function handleChange(event: {
 		target: { value: React.SetStateAction<string> }
 	}) {
 		if (event.target.value.length <= 600) {
 			setError(false)
 			setMessage(event.target.value)
-			socket?.emit("typing")
-		}
-		if (event.target.value === "") {
-			setError(true)
+			socket?.emit("typing-started")
+
+			// check if user has stopped typing and log / emit event
+			if (typingTimer) clearTimeout(typingTimer)
+			setTypingTimer(setTimeout(() => socket?.emit("typing-stopped"), 700))
 		}
 	}
 
@@ -32,7 +35,11 @@ const MessageInput = ({ message, setMessage, socket }: InputProps) => {
 			</label>
 			<p className='text-accent text-xs italic'>
 				{message.length} / 500 characters
-				{error ? <b className='text-warning'>Message cannot be empty</b> : ""}
+				{error ? (
+					<b className='text-warning mx-3'>Message cannot be empty</b>
+				) : (
+					""
+				)}
 			</p>
 			<input
 				type='text'

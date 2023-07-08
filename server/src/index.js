@@ -34,8 +34,12 @@ io.on('connection', socket => {
         console.log('Message received', message)
     });
 
-    socket.on(('typing'), () => {
-        console.log("pde")
+    socket.on(('typing-started'), () => {
+        socket.broadcast.emit("typing-started")
+    })
+
+    socket.on(('typing-stopped'), () => {
+        socket.broadcast.emit("typing-stopped")
     })
 
     socket.on('disconnect', () => {
