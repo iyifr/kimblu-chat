@@ -13,6 +13,7 @@ const DirectMessage = () => {
 	const [message, setMessage] = useState("")
 	const [allMessages, setAllMessages] = useState<Array<Message>>([])
 	const [typing, setTyping] = useState(false)
+	const [otherUsersOnline, setOtherUsersOnline] = useState(false)
 
 	useEffect(() => {
 		const newSocket = io("http://localhost:5000")
@@ -34,7 +35,9 @@ const DirectMessage = () => {
 			])
 		})
 
-		
+		socket.on("joined", () => {
+			setOtherUsersOnline(true)
+		})
 	}, [socket, setAllMessages])
 
 	useEffect(() => {
@@ -102,8 +105,8 @@ const ChatBubble = ({ data }: ChatBubbleProps) => {
 					) : (
 						<>
 							<p>
-								{data.message.slice(0, 25)} <br />{" "}
-								{data.message.slice(26, data.message.length)}
+								{data.message.slice(0, 19)} <br />{" "}
+								{data.message.slice(20, data.message.length)}
 							</p>
 						</>
 					)}
@@ -116,9 +119,17 @@ const ChatBubble2 = ({ data }: ChatBubbleProps) => {
 	return (
 		<>
 			<div className='chat'>
-				<div className='chat-bubble chat-bubble-accent max-w-screen-lg'>
-					{data.message}
-				</div>
+				<div className='chat-bubble chat-bubble-accent max-w-screen-sm'>
+				{data.message.length > 18 ? (
+						<p> {data.message} </p>
+					) : (
+						<>
+							<p>
+								{data.message.slice(0, 19)} <br />{" "}
+								{data.message.slice(20, data.message.length)}
+							</p>
+						</>
+					)}</div>
 			</div>
 		</>
 	)

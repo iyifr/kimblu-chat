@@ -29,6 +29,10 @@ httpServer.listen(port, () => console.log(`Server running on port ${port}`))
 io.on('connection', socket => {
     console.log(`Socket ${socket.id} connected`)
 
+    socket.on('joined', () => {
+        socket.broadcast.emit("joined")
+    });
+
     socket.on('send-message', (message) => {
         socket.broadcast.emit("message-from-server", message)
         console.log('Message received', message)

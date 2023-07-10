@@ -1,12 +1,12 @@
 import { Outlet } from "react-router-dom"
-import DirectMessage from "./components/containers/DirectMessage/_ui"
+import { Navbar } from "./components/containers/NavBar/_ui"
 
 function App() {
 	return (
 		<>
-			<p className='text-primary text-8xl my-5 text-center'> Welcome to Kimblu </p>
+			<p className='text-primary text-7xl my-5 text-center'> Kimblu Chat! </p>
+			<Navbar />
 			<Outlet />
-			{/* <DirectMessage /> */}
 		</>
 	)
 }
