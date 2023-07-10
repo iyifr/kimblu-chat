@@ -3,6 +3,7 @@ import App from "./App";
 
 // Chat Window screen
 import DirectMessage from "./components/containers/DirectMessage/_ui";
+import Room from "./components/containers/Rooms/_ui";
 
 const router  = createBrowserRouter([
     {
@@ -17,7 +18,7 @@ const router  = createBrowserRouter([
     },
     {
         path: "/room/:roomId",
-        element: <>Hello room</>
+        element: <Room />
     }
 ])
 
