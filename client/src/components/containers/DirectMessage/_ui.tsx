@@ -33,6 +33,12 @@ const DirectMessage = () => {
 				{ message: data.message, recieved: true },
 			])
 		})
+
+		
+	}, [socket, setAllMessages])
+
+	useEffect(() => {
+		if (!socket) return
 		socket.on("typing-started", () => {
 			setTyping(true)
 		})
@@ -40,7 +46,7 @@ const DirectMessage = () => {
 		socket.on("typing-stopped", () => {
 			setTyping(false)
 		})
-	}, [socket, setAllMessages])
+	}, [socket])
 
 	const handleSubmit = (e: { preventDefault: () => void }) => {
 		e.preventDefault()

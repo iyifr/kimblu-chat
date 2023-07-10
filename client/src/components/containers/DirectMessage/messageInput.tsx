@@ -6,6 +6,7 @@ type InputProps = {
 	setMessage: React.Dispatch<React.SetStateAction<string>>
 	socket: Socket | null
 }
+
 const MessageInput = ({ message, setMessage, socket }: InputProps) => {
 	const [error, setError] = useState(true)
 	const [typingTimer, setTypingTimer] = useState<null | number>(null)

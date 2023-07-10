@@ -1,10 +1,12 @@
+import { Outlet } from "react-router-dom"
 import DirectMessage from "./components/containers/DirectMessage/_ui"
 
 function App() {
 	return (
 		<>
-			<p className='text-red-500 text-8xl'> Hello world! </p>
-			<DirectMessage />
+			<p className='text-primary text-8xl my-5 text-center'> Welcome to Kimblu </p>
+			<Outlet />
+			{/* <DirectMessage /> */}
 		</>
 	)
 }
